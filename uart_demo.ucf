@@ -1,0 +1,15 @@
+
+#Created by Constraints Editor (xc5vlx50t-ff1136-2) - 2017/08/22
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 10 ns HIGH 50%;
+
+# clock pin for Genesys rev C board
+ NET "clk"   LOC = "AG18"; # Bank = 4, Pin name = IO_L6P_GC_4, Type = GCLK, Sch name = GCLK0
+
+# RS232 connector1
+ NET "uart_rx" LOC = "AG15"; # Bank = 4, Pin name = IO_L5N_GC_4,   Sch name = RS1-RX
+ NET "uart_tx" LOC = "AF19"; # Bank = 4, Pin name = IO_L6N_GC_4,   Sch name = RS1-TX
+
+# BTN0 as reset
+ NET "rst" LOC = "G6";  # Bank = 12, Pin name = IO_L17P_12,        Sch name = BTN0
+
